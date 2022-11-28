@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "exercise.h"
-
+#if 0
 // int main()
 int main()
 {
@@ -45,4 +45,20 @@ int main()
     my_data = nullptr;
 
     return 0;
+}
+#endif
+
+int main()
+{
+    int* my_data = nullptr;
+    std::uint32_t size = 3;
+    std::cout << &size << std::endl;
+    my_data = new int[3];
+    my_data[0] = 0;
+    my_data[1] = 1;
+    my_data[2] = 2;
+
+    print_array(my_data, size);
+    delete [] my_data;
+
 }

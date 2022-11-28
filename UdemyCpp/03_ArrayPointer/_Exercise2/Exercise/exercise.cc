@@ -29,3 +29,12 @@ void pop_back(int *&input_array, const std::uint32_t &size)
 
     input_array = temp;
 }
+
+
+void print_array(int *array, std::uint32_t &size)
+{
+        std::uint32_t *p_size = &size;
+        std::cout << p_size << std::endl;
+        for(std::uint32_t i = 0; i < size; i++)
+            std::cout << "Addresse: " << array + i << " | Wert: " << *(array+i) << std::endl;
+}
